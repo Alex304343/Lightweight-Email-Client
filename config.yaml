@@ -1,0 +1,22 @@
+server:
+  host: "127.0.0.1"
+  smtp_port: 25        # Порт для отправки (может быть 25, 2525 или 3025)
+  pop3_port: 110       # Порт для получения (может быть 110 или 3110)
+
+account1:
+  username: "acc1"
+  password: "123"
+
+
+account2:
+  username: "acc2"
+  password: "321"
+
+
+storage:
+  db_file: "local_mail_box.db" # Куда SQLite будет сохранять письма
+
+logging:
+  log_to_stderr: true   # true - писать в консоль, false - писать в файлы (/tmp)
+  color_log: true
+  min_level: 0          # 0 = INFO, 1 = WARNING, 2 = ERROR, 3 = FATAL
