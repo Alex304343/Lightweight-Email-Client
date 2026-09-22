@@ -14,7 +14,7 @@ account2:
 
 
 storage:
-  db_file: "local_mail_box.db" # Куда SQLite будет сохранять письма
+  db_file: "local_mail_box.db" 
 
 logging:
   log_to_stderr: true   # true - писать в консоль, false - писать в файлы (/tmp)
