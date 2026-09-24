@@ -20,5 +20,5 @@ Config::Config(const std::string& filename){
     // Логирование
     log_to_stderr = config["logging"]["log_to_stderr"].as<bool>();
     color_log = config["logging"]["color_log"].as<bool>();
-    min_log_level = config["logging"]["min_log_level"].as<int>();
+    min_log_level = config["logging"]["min_level"].as<int>();
 }
