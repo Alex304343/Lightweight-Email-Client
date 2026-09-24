@@ -8,10 +8,6 @@ account1:
   password: "123"
 
 
-account2:
-  username: "acc2"
-  password: "321"
-
 
 storage:
   db_file: "local_mail_box.db" 
