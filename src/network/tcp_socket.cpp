@@ -84,6 +84,9 @@ bool TcpSocket::sendString(const std::string& data) {
     pos = 0;
     while ((pos = log_data.find("\n", pos)) != std::string::npos) log_data.replace(pos, 1, "\\n"), pos += 2;
 
+    if(log_data.find("PASS") != std::string::npos){
+        log_data = "[REDACTED PASSWORD]";
+    }
     LOG(INFO) << "Client send: " << log_data;
     return true;
 }
