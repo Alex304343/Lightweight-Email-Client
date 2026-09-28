@@ -57,7 +57,7 @@ bool SmtpClient::sendEmail(const std::string& to, const std::string& subject, co
         return false;
     }
     
-    if(socket.sendString("To: " + to + "\r\n")){
+    if(!socket.sendString("To: " + to + "\r\n")){
         socket.closeConnection();
         LOG(ERROR) << "Failed to send email To header.";
         return false;
