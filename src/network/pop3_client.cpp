@@ -97,6 +97,17 @@ bool Pop3Client::getMessage(int index, Message& out_msg) {
     return true;
 }
 
+bool Pop3Client::deleteMessage(int index) {
+    std::string response;
+    if (!sendCommand("DELE " + std::to_string(index), response)) {
+        LOG(ERROR) << "Failed to delete message " << index << " on server.";
+        return false;
+    }
+    
+    LOG(INFO) << "Message " << index << " marked for deletion on server.";
+    return true;
+}
+
 void Pop3Client::disconnect() {
     if (socket.isConnected()) {
         std::string response;

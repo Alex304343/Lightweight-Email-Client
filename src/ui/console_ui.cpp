@@ -74,6 +74,7 @@ void ConsoleUI::checkInbox() {
         if (pop3.getMessage(i, msg)) {
             if (db.saveMessage(msg)) {
                 downloaded++;
+                pop3.deleteMessage(i);
             }
         }
     }

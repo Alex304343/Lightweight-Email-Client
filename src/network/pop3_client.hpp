@@ -18,6 +18,8 @@ public:
 
     bool getMessage(int index, Message& out_msg);
 
+    bool deleteMessage(int index);
+
     void disconnect();
 
 private:
