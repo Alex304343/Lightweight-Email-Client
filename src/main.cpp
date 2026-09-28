@@ -4,6 +4,8 @@
 
 #include "logger/logger.hpp"
 #include "core/config.hpp"
+#include "sqlite/mailbox.hpp"
+#include "ui/console_ui.hpp"
 
 int main(int argc, char* argv[]) {
     
@@ -22,5 +24,13 @@ int main(int argc, char* argv[]) {
 
     LOG(INFO) << "Logger initialized successfully.";
 
+    try {
+        Mailbox db(config.db_file);
+        ConsoleUI ui(config, db);
+        ui.run();
+    } catch (const std::exception& e) {
+        LOG(ERROR) << "Exception: " << e.what();
+        return 1;
+    }
     return 0;
 }
