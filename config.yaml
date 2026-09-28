@@ -4,8 +4,8 @@ server:
   pop3_port: 3110       # Порт для получения (может быть 110 или 3110)
 
 account:
-  username: "acc1@localhost"
-  password: "123"
+  username: "acc2@localhost"
+  password: "321"
 
 
 
