@@ -31,6 +31,8 @@ $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
 clean:
 	rm -rf $(BUILD_DIR)
 
+run: all
+	./$(TARGET)
 # Подключение зависимостей заголовочных файлов
 -include $(DEPS)
 
