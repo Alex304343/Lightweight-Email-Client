@@ -1,5 +1,3 @@
-
-```markdown
 # Lightweight Email Client (C++)
 
 A lightweight, console-based email client written in C++ (C++23) for Linux. 
